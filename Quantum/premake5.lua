@@ -11,13 +11,20 @@ project "Quantum"
     objdir        (OBJ_DIR)
     files {
         "src/**.cpp",
+        "src/**.c",
     }
     includedirs {
         "include/",
-        "src/"
+        "src/",
+
+        "../Dependencies/glad/include/",
+        
+        "../Lib/QWindow/include/",
+        "../Lib/QApplication/include/",
     }
     links {
-        
+        "QApplication",
+        "QWindow",
     }
     defines {
 

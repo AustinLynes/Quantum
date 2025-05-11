@@ -1,7 +1,15 @@
+#include "app.h"
 #include <iostream>
 
-void main() {
-	std::cout << "Hello World" << std::endl;
-	system("pause");  // Calls the system command to pause
+QuantumApp::QuantumApp()
+{
+}
 
+QuantumApp::~QuantumApp()
+{
+}
+
+int QuantumApp::Execute()
+{
+    return 0;
 }

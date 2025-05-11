@@ -1,28 +1,21 @@
 workspace (WORKSPACE_NAME)
     startproject (START_PROJECT)
     configurations {
-        "debug",
-        "profile",
-        "release"
+        "Debug",
+        "Release"
     }
     platforms {
-        "x86_64",
         "x64"
     }
-    filter "configurations:debug"
-        runtime  "debug"
+    filter "configurations:Debug"
+        runtime  "Debug"
         symbols  "on"
         optimize "off"
-    filter "configurations:profile"
-        runtime  "release"
-        symbols  "on"
-        optimize "on"
-    filter "configurations:release"
+    filter "configurations:Release"
         runtime  "release"
         symbols  "off"
         optimize "on"
-    filter "platforms:x86_64"
-        architecture "x86_64"
+
     filter "platforms:x64"
         architecture "x64"
-    
+        

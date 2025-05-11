@@ -1,4 +1,4 @@
-project "QWindow"
+project "QApplication"
     kind          "StaticLib"
     language      "C++"
     cppdialect    "C++17"
@@ -8,23 +8,17 @@ project "QWindow"
 
     targetdir     (BIN_DIR)
     objdir        (OBJ_DIR)
+
     files {
         "src/**.cpp",
     }
     includedirs {
-        "include/QWindow",
-        
-        "src/",
-        "../../Dependencies/glad/include/",
-        "../../Dependencies/imgui/",
-        "../../Dependencies/implot/",
-        "../../Dependencies/GLFW/include",
+        "include/QApplication/include/",
+        "include/QWindow/include/",
+        "src/"
     }
     links {
-        "opengl32.lib",
-        "GLFW",
-        "imgui",
-        "implot",
+        
     }
     defines {
 
